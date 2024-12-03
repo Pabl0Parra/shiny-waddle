@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ChartsContent from '../Charts/ChartsContent';
 
 import './Sidebar.css';
-import { Item, SidebarProps } from '../../../../types';
+import { SidebarProps } from '../../../../types';
 import { motion } from 'framer-motion';
 
 const Sidebar: React.FC<SidebarProps> = ({
@@ -18,8 +18,6 @@ const Sidebar: React.FC<SidebarProps> = ({
   lastBuoyTimeStamp,
   selectedNameBuoy,
   logoBuoy,
-  lat_str,
-  longi_str,
 }) => {
   const [activeTab, setActiveTab] = useState<'details' | 'charts'>('details');
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ChartsGlobalContent from '../Charts/ChartsGlobalContent';
 import './Sidebar.css';
-import { Item, SidebarProps } from '../../../../types';
+import { SidebarProps } from '../../../../types';
 import { motion } from 'framer-motion';
 
 const SideGlobalComponent: React.FC<SidebarProps> = ({
@@ -17,7 +17,6 @@ const SideGlobalComponent: React.FC<SidebarProps> = ({
   lastBuoyTimeStamp,
   selectedNameBuoy,
   logoBuoy,
-  websiteType,
   lat_str,
   longi_str,
 }) => {
