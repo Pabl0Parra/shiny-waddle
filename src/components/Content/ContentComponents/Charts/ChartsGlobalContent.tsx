@@ -227,7 +227,9 @@ const ChartsGlobalContent: React.FC<ChartsGlobalContentProps> = ({
         timestampsSet.add(sanitizedTimestamp);
       }
     });
-    const timeSeries = Array.from(timestampsSet).sort();
+    const timeSeries = Array.from(timestampsSet).sort((a, b) =>
+      a.localeCompare(b),
+    );
 
     // Initialize timestamp index map
     const timestampIndexMap: { [timestamp: string]: number } = {};
