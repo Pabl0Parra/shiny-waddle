@@ -1,0 +1,20 @@
+:root {
+  --primary-color: #F7931D;
+  --secondary-color: #231F20;
+  --light-gray: #F5F5F5;
+  --medium-gray: #E8E8E8;
+  --dark-gray: #D4D4D4;
+  --charcoal-gray: #9CA0A3;
+}
+body{
+  margin:0px;
+  color:var(--secondary-color);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  font-size: 16px;
+  background-color: #fff;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+

@@ -1,0 +1,204 @@
+<!-- template_detail_bouy.hbs -->
+<div class="section-brand">
+  {{#each logoBuoy}}
+        <img src="{{logopath}}" alt="{{name_buoy}} logo">
+  {{/each}}
+</div>
+
+<h1>{{selectedNameBuoy}}</h1>
+<div class="ubication">
+  <img src="assets/img/icon-pointer.svg" alt="Pointer map" /> 緯度: {{firstItem.lat_str}} · 長さ: {{firstItem.longi_str}}
+</div>
+<div class="date">
+  <span>
+    <img src="assets/img/icon-date.svg" alt="Date" /> {{lastTimeStamp}} 
+  </span>
+  <span>
+    <img src="assets/img/icon-date.svg" alt="Date" />  {{lastBuoyTimeStamp}} 
+  </span>
+</div>
+
+<div class="list">
+  <div class="list-col-2 list-temperature">
+      <!--TEMPERATURE-->
+      <div class="list-item">
+          {{#with (getItem dataBuoy "vargen_name" "meteo_taAvg") as |item|}}
+          <div class="list-item-icon list-item-temperature">
+            <img src="assets/img/icons/icono-e-thermometer.svg" alt="{{item.vargen_desc}}" title="{{item.vargen_desc}}" />
+          </div>
+          <div class="list-item-content">
+            <div class="list-item-col">
+              <span class="title">{{item.vargen_desc}}</span>
+              <span class="text">{{getValueItem item}} <span class="units">{{getUnitItem item }}</span></span>
+            </div>
+          {{/with}}
+          {{#with (getItem dataBuoy "vargen_name" "adcp_temp") as |item|}}
+            <div class="list-item-col">
+              <span class="title">{{item.vargen_desc}}</span>
+              <span class="text">{{getValueItem item }} <span class="units">{{getUnitItem item }}</span></span>
+            </div>
+          {{/with}}
+          </div>
+      </div>
+      <!--WIND-->
+      <div class="list-item list-wind">
+          {{#with (getItem dataBuoy "vargen_name" "meteo_smAvg") as |item|}}
+          <div class="list-item-icon list-item-air">
+            <img src="assets/img/icons/icono-e-air.svg" alt="{{item.vargen_desc}}" title="{{item.vargen_desc}}" />
+          </div>
+          <div class="list-item-content">
+            <div class="list-item-col">
+              <span class="title">{{item.vargen_desc}}</span>
+              <span class="text">{{getValueItem item }} <span class="units">{{getUnitItem item }}</span></span>
+            </div>
+          {{/with}}
+          {{#with (getItem dataBuoy "vargen_name" "Sx_max") as |item|}}
+            <div class="list-item-col">
+              <span class="title">{{item.vargen_desc}}</span>
+              <span class="text">{{getValueItem item }} <span class="units">{{getUnitItem item }}</span></span>
+            </div>
+          {{/with}}
+          {{#with (getItem dataBuoy "vargen_name" "dmn_dirBear") as |item|}} 
+            <div class="list-item-col">
+              <span class="title">{{item.vargen_desc}}</span>
+              <span class="text">
+                {{#ifCond item.value_sint -9999}}
+                  <img src="assets/img/icons/direction-none.svg" alt="{{item.vargen_desc}}" title="{{item.vargen_desc}}" /> 0
+                {{else}}
+                  <img 
+                    src="assets/img/icons/direction-arrow.svg" 
+                    alt="{{item.vargen_desc}}" 
+                    title="{{item.vargen_desc}}" 
+                    style="transform: rotate({{adjustWindDir (getValueItem item)}}deg);" 
+                  /> 
+                  {{getValueItem item}} {{item.cardinal_direction}}
+                {{/ifCond}}
+              </span>
+            </div>
+          {{/with}}
+          </div>
+      </div>
+  </div>
+  <!-- WAVE -->
+  <div class="list-item list-wave">
+    {{#with (getItem dataBuoy "vargen_name" "wave_Hs") as |item|}}
+      <div class="list-item-icon list-item-waves">
+        <img src="assets/img/icons/icono-e-waves.svg" alt="Waves" title="{{item.vargen_desc}}" />
+      </div>
+      <div class="list-item-content">
+        <div class="list-item-col">
+          <span class="title">{{item.vargen_desc}}</span>
+          <span class="text">{{getValueItem item }} <span class="units">{{getUnitItem item }}</span></span>
+        </div>
+    {{/with}}
+    {{#with (getItem dataBuoy "vargen_name" "wave_Ts") as |item|}}
+        <div class="list-item-col">
+          <span class="title">{{item.vargen_desc}}</span>
+          <span class="text">{{getValueItem item }} <span class="units">{{getUnitItem item }}</span></span>
+        </div>
+    {{/with}}
+    {{#with (getItem dataBuoy "vargen_name" "wave_dirAvg") as |item|}}
+      <div class="list-item-col">
+        <span class="title">{{item.vargen_desc}}</span>
+        <div class="text">
+          {{#ifCond item.value_sint -9999}}
+            <img 
+              src="assets/img/icons/direction-none.svg" 
+              alt="{{item.vargen_desc}}" 
+              title="{{item.vargen_desc}}" 
+            /> 
+            0
+          {{else}}
+            <img 
+              src="assets/img/icons/direction-arrow.svg" 
+              alt="{{item.vargen_desc}}" 
+              title="{{item.vargen_desc}}" 
+              style="transform: rotate({{adjustWindDir (getValueItem item)}}deg);" 
+            /> 
+            {{getValueItem item}} {{item.cardinal_direction}}
+          {{/ifCond}}
+        </div>
+      </div>
+    {{/with}}
+    {{#with (getItem dataBuoy "vargen_name" "wave_Hmax") as |item|}}
+      <div class="list-item-col">
+        <span class="title">{{item.vargen_desc}}</span>
+        <div class="text">
+          {{#ifCond item.value_sint -9999}}
+            0
+          {{else}}
+            {{getValueItem item }} <span class="units">{{getUnitItem item }}</span>
+          {{/ifCond}}
+        </div>
+      </div>
+    {{/with}}
+     </div>
+  </div>
+  <!--METEO-->
+  <div class="list-item list-meteo">
+      {{#with (getItem dataBuoy "vargen_name" "meteo_paAvg") as |item|}}
+      <div class="list-item-icon list-item-meteo">
+        <img src="assets/img/icons/icono-e-meteo.svg" alt="{{item.vargen_desc}}" title="{{item.vargen_desc}}" />
+      </div>
+      <div class="list-item-content">
+        <div class="list-item-col col-inline">
+          <div class="inline">
+            <span class="title">{{item.vargen_desc}}</span>
+            <span class="text">{{getValueItem item }} <span class="units">{{getUnitItem item }} </span></span>
+          </div>
+        {{/with}}
+          {{#with (getItem dataBuoy "vargen_name" "meteo_uaAvg") as |item|}}
+            <div class="inline">
+              <span class="title">{{item.vargen_desc}}</span>
+              <span class="text">{{getValueItem item }} <span class="units">{{getUnitItem item }}</span></span>
+            </div>
+          {{/with}}
+          {{#with (getItem dataBuoy "vargen_name" "SlrW_Avg") as |item|}}
+          <div class="inline">
+            <span class="title">{{item.vargen_desc}}</span>
+            <span class="text">{{getValueItem item }} <span class="units">{{getUnitItem item }}</span></span>
+          </div>
+        {{/with}}
+        </div>
+      </div>
+  </div>
+
+  <!-- TIDE -->
+  <div class="list-item list-wave">
+    {{#with (getItem dataBuoy "vargen_name" "adcp_vc1") as |item|}}
+      <div class="list-item-icon list-item-waves">
+        <img src="assets/img/icons/icono-e-tide.svg" alt="Waves" title="{{item.vargen_desc}}" />
+      </div>
+      <div class="list-item-content">
+        <div class="list-item-col">
+          <span class="title">{{item.vargen_desc}}</span>
+          <span class="text">{{getValueItem item }} <span class="units">{{getUnitItem item }}</span></span>
+        </div>
+    {{/with}}
+    {{#with (getItem dataBuoy "vargen_name" "adcp_vc21") as |item|}}
+        <div class="list-item-col">
+          <span class="title">{{item.vargen_desc}}</span>
+          <span class="text">{{getValueItem item }} <span class="units">{{getUnitItem item }}</span></span>
+        </div>
+    {{/with}}
+    {{#with (getItem dataBuoy "vargen_name" "adcp_dc1") as |item|}}
+        <div class="list-item-col">
+          <span class="title">{{item.vargen_desc}}</span>
+          <div class="text">
+              {{#ifCond item.value_sint -9999}}
+              <img src="assets/img/icons/direction-none.svg" alt="{{item.vargen_desc}}" title="{{item.vargen_desc}}" /> 0
+              {{else}}
+              <img src="assets/img/icons/direction-arrow.svg" alt="{{item.vargen_desc}}" title="{{item.vargen_desc}}" style="transform :rotate({{getValueItem item }}deg)" /> {{getValueItem item }} {{item.cardinal_direction}}
+              {{/ifCond}}
+            </div>
+        </div>
+    {{/with}}    
+    {{#with (getItem dataBuoy "vargen_name" "sal_Avg") as |item|}}
+        <div class="list-item-col">
+          <span class="title">{{item.vargen_desc}}</span>
+          <span class="text">{{getValueItem item }} <span class="units">{{getUnitItem item }}</span></span>
+        </div>
+    {{/with}}
+     </div>
+  </div>
+</div>

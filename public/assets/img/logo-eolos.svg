@@ -1,0 +1,36 @@
+<svg id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128.399" height="44.075" viewBox="0 0 128.399 44.075">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_7" data-name="Rectángulo 7" width="128.399" height="44.075"/>
+    </clipPath>
+  </defs>
+  <rect id="Rectángulo_2" data-name="Rectángulo 2" width="128.399" height="44.075" fill="none"/>
+  <g id="Grupo_9" data-name="Grupo 9" clip-path="url(#clip-path)">
+    <g id="Layer-1" transform="translate(-0.001 0.005)">
+      <g id="Grupo_1" data-name="Grupo 1" transform="translate(0 15.687)">
+        <path id="Trazado_1" data-name="Trazado 1" d="M-23.351-26.86a4.978,4.978,0,0,0-4.919-4.184,4.969,4.969,0,0,0-5.154,4.184Zm8.071,5.429H-33.57c0,3.82,1.867,5.888,5.441,5.888a4.278,4.278,0,0,0,4.158-2.427h8.354c-1.384,6.252-6.877,9.1-12.459,9.1-8.117,0-14.181-4.959-14.181-14.107,0-8.837,5.581-14.161,13.561-14.161,8.5,0,13.414,5.687,13.414,14.73Z" transform="translate(42.256 37.143)" fill="#231f20"/>
+      </g>
+      <g id="Grupo_2" data-name="Grupo 2" transform="translate(71.246 43.07) rotate(180)">
+        <rect id="Rectángulo_3" data-name="Rectángulo 3" width="8.687" height="42.89" fill="#231f20"/>
+      </g>
+      <g id="Grupo_3" data-name="Grupo 3" transform="translate(75.166 15.687)">
+        <path id="Trazado_2" data-name="Trazado 2" d="M-11.326-14.974c0,3.355,2.052,5.94,5.582,5.94s5.586-2.585,5.586-5.94c0-3.257-2.052-5.994-5.586-5.994s-5.582,2.737-5.582,5.994m20.333,0C9.007-5.984,2.133-.867-5.744-.867c-7.829,0-14.751-5.065-14.751-14.107s6.873-14.161,14.751-14.161S9.007-24.023,9.007-14.974" transform="translate(20.495 29.135)" fill="#231f20"/>
+      </g>
+      <g id="Grupo_4" data-name="Grupo 4" transform="translate(106.96 15.686)">
+        <path id="Trazado_3" data-name="Trazado 3" d="M-22-34.784a10.125,10.125,0,0,0-4.68-1.292c-1,0-2.721.469-2.721,1.809,0,1.81,2.721,2.068,3.915,2.325,4.06.882,7.116,2.945,7.116,7.856,0,6.976-5.874,9.871-11.557,9.871A17.932,17.932,0,0,1-39.8-17.262l3.149-6.564a13.317,13.317,0,0,0,6.877,2.69c1.1,0,2.72-.574,2.72-2.02,0-2.068-2.72-2.168-5.444-2.943s-5.435-2.221-5.435-6.981c0-6.509,5.435-9.4,10.784-9.4a18.259,18.259,0,0,1,8.072,1.7Z" transform="translate(39.803 42.482)" fill="#231f20"/>
+      </g>
+      <g id="Grupo_5" data-name="Grupo 5" transform="translate(29.121 15.687)">
+        <path id="Trazado_4" data-name="Trazado 4" d="M-11.327-14.974c0,3.355,2.052,5.94,5.586,5.94s5.587-2.585,5.587-5.94c0-3.257-2.054-5.994-5.587-5.994s-5.586,2.737-5.586,5.994m20.341,0C9.015-5.984,2.137-.867-5.741-.867-13.57-.867-20.5-5.931-20.5-14.974s6.879-14.161,14.756-14.161S9.015-24.023,9.015-14.974" transform="translate(20.497 29.135)" fill="#f7931d"/>
+      </g>
+      <g id="Grupo_6" data-name="Grupo 6" transform="translate(35.671 0)">
+        <rect id="Rectángulo_4" data-name="Rectángulo 4" width="16.312" height="3.222" transform="translate(0)" fill="#f7931d"/>
+      </g>
+      <g id="Grupo_7" data-name="Grupo 7" transform="translate(37.714 4.601)">
+        <rect id="Rectángulo_5" data-name="Rectángulo 5" width="12.226" height="3.227" transform="translate(0 0)" fill="#f7931d"/>
+      </g>
+      <g id="Grupo_8" data-name="Grupo 8" transform="translate(42.336 9.209)">
+        <rect id="Rectángulo_6" data-name="Rectángulo 6" width="2.982" height="3.226" transform="translate(0 0)" fill="#f7931d"/>
+      </g>
+    </g>
+  </g>
+</svg>

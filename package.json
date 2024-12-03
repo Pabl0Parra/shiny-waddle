@@ -1,0 +1,61 @@
+{
+  "name": "eolos.frontend.react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@iconify/react": "^5.0.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.101",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vis.gl/react-google-maps": "^1.1.0",
+    "apexcharts": "^3.54.1",
+    "axios": "^1.7.7",
+    "cross-env": "^7.0.3",
+    "date-fns": "^4.1.0",
+    "dompurify": "^3.2.0",
+    "dotenv": "^16.4.5",
+    "framer-motion": "^11.11.17",
+    "handlebars": "^4.7.8",
+    "handlebars-helpers": "^0.10.0",
+    "react": "^18.3.1",
+    "react-apexcharts": "^1.5.0",
+    "react-dom": "^18.3.1",
+    "react-loader-spinner": "^6.1.6",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:preprod": "cross-env REACT_APP_ENV=preproduction react-scripts start",
+    "start:prod": "cross-env REACT_APP_ENV=production react-scripts start",
+    "build": "react-scripts build",
+    "build:preprod": "cross-env REACT_APP_ENV=preproduction react-scripts build",
+    "build:prod": "cross-env REACT_APP_ENV=production react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/dompurify": "^3.0.5",
+    "@types/handlebars-helpers": "^0.5.6",
+    "eslint": "^8.0.0",
+    "eslint-config-react-app": "7.0.1"
+  }
+}

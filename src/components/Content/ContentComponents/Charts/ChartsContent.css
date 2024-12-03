@@ -1,0 +1,398 @@
+.charts-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+}
+
+.charts-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.charts-tab-button {
+  padding: 10px 20px;
+  background-color: var(--medium-gray);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.charts-tab-button.active,
+.charts-tab-button:hover {
+  background-color: var(--primary-color);
+}
+
+.handlebars-and-variables {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.handlebars-content {
+  min-width: 250px;
+}
+
+.variable-selection {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 200px;
+  margin-top: 7.5%;
+  justify-content: flex-start;
+}
+
+.variable-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 190px;
+}
+
+.wind-directions-section {
+  display: flex;
+  align-items: center;
+  margin-top: 2%;
+  width: 100%;
+  border-radius: 4px;
+  overflow-x: hidden;
+}
+
+.wind-direction-label {
+  display: inline-block;
+  margin-top: 28px;
+  margin-left: 16px;
+  transform: rotate(-90deg);
+  transform-origin: left;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+
+.wind-direction-label-2 {
+  margin: 0 16px 0 10px;
+  margin-right: 4px;
+  margin-left: 10px;
+}
+
+.wind-direction-icon {
+  width: 24px;
+  height: 40px;
+}
+
+.wind-directions-row {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+  padding: 4px;
+}
+
+.wind-direction-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 20px;
+  margin: 0 2px;
+}
+
+.wind-direction-item svg {
+  max-width: 100%;
+  margin-bottom: 2px;
+}
+
+.wind-direction-item .timestamp {
+  color: #666;
+  line-height: 1;
+}
+
+.wind-directions-row::-webkit-scrollbar {
+  display: none;
+}
+
+.arrow-timestamp {
+  font-size: 11px;
+}
+
+.wind-direction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrow-timestamp.placeholder {
+  visibility: hidden;
+  height: 1.6em;
+  width: 100%;
+}
+
+.wind-direction svg {
+  margin-bottom: 0.3em;
+}
+
+.no-var-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 10%;
+  color: rgb(156, 156, 151);
+}
+
+.no-var-image {
+  width: 90%;
+  height: auto;
+  margin-top: 20px;
+  opacity: 0.1;
+}
+
+.no-var-message {
+  font-size: 30px;
+}
+
+.chart-wrapper {
+  height: 380px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .chart-wrapper {
+    height: 450px;
+  }
+  .variable-selection {
+    flex-wrap: wrap;
+    overflow-x: auto;
+    margin-top: 11%;
+  }
+}
+
+@media (max-width: 992px) {
+  .handlebars-and-variables {
+    flex-direction: column;
+  }
+
+  .variable-selection {
+    flex-wrap: wrap;
+    overflow-x: auto;
+    margin-top: 0px;
+  }
+
+  .variable-checkbox {
+    font-size: 10px;
+  }
+
+  .chart-wrapper {
+    height: 350px;
+  }
+
+  .charts-tab-button {
+    flex: 1 1 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .charts-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .no-var-container {
+    margin-top: 20%;
+  }
+
+  .no-var-image {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .handlebars-and-variables {
+    flex-direction: column;
+  }
+
+  .variable-selection {
+    flex-wrap: wrap;
+    overflow-x: auto;
+    margin-top: 0px;
+  }
+
+  .variable-checkbox {
+    font-size: 10px;
+  }
+
+  .chart-wrapper {
+    height: 350px;
+  }
+
+  .charts-tab-button {
+    flex: 1 1 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .charts-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .no-var-container {
+    margin-top: 20%;
+  }
+
+  .no-var-image {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .handlebars-content {
+    margin-top: -10px;
+  }
+
+  .chart-container {
+    padding-right: 4px;
+    height: 220px;
+  }
+
+  .variable-checkbox {
+    font-size: 14px;
+  }
+
+  .charts-content {
+    padding: 9px 1px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+  .wind-direction-label {
+    font-size: 14px;
+  }
+
+  .wind-direction svg {
+    width: 20px;
+    height: 30px;
+  }
+
+  .wind-directions-row {
+    margin-top: 2%;
+    padding-left: 4px;
+    gap: 8px;
+  }
+
+  /* .wind-directions-row .wind-direction:nth-last-child(2) {
+    gap: 0px;
+    margin-left: -10px;
+  }
+
+  .wind-directions-row .wind-direction:last-child {
+    margin-left: -10px;
+  } */
+
+  .wind-degree {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 425px) {
+  .chart-container-2 {
+    height: 200px;
+  }
+
+  .wind-directions-row {
+    margin-top: 4%;
+  }
+
+  .wind-direction-label {
+    font-size: 16px;
+    margin-right: -10px;
+  }
+
+  .arrow-timestamp {
+    font-size: 10px;
+  }
+
+  .wind-directions-section {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .variable-selection {
+    margin-top: 10.5vh; /* Default for all platforms */
+  }
+}
+
+/* macOS-Specific Adjustment */
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px) and (max-width: 1600px) {
+  .variable-selection {
+    margin-top: 8vh; /* Adjusted for macOS */
+  }
+}
+
+@media (min-width: 1601px) and (max-width: 1920px) {
+  .variable-selection {
+    margin-top: 8.4vh;
+  }
+
+  .chart-container {
+    height: 270px;
+  }
+}
+@media screen and (min-width: 1921px) {
+  body {
+    overflow: hidden;
+  }
+
+  .chart-wrapper {
+    height: 600px;
+  }
+
+  .chart-container {
+    height: 340px;
+  }
+
+  .wind-directions-row {
+    gap: 18px;
+  }
+  .variable-selection {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 200px;
+    margin-top: 6.4vh;
+  }
+  .variable-checkbox {
+    font-size: 20px;
+  }
+  .wind-directions-section {
+    padding: 8px 16px;
+  }
+  .wind-direction-label {
+    font-size: 26px;
+  }
+}
