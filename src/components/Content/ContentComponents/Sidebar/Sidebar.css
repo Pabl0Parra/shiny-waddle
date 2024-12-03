@@ -275,9 +275,7 @@
 .list::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-.sidebar-hidden {
-  display: none !important;
-}
+
 .skeleton-loader {
   display: flex;
   flex-direction: column;
@@ -547,7 +545,7 @@
     display: flex;
     justify-content: flex-start;
     gap: 8px;
-    margin-bottom: 8pxpx;
+    margin-bottom: 8px;
   }
 
   .tab-button {
