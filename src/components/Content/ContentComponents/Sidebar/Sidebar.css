@@ -49,6 +49,7 @@
   display: none;
   opacity: 0;
   height: calc(100% - 83px);
+  padding: 16px;
 }
 .sidebar-content .ubication {
   color: var(--charcoal-gray);
@@ -325,10 +326,6 @@
   right: 0;
   height: 2px;
   background-color: #f7931d;
-}
-
-.sidebar-content {
-  padding-top: 16px;
 }
 
 @keyframes skeleton-animation {

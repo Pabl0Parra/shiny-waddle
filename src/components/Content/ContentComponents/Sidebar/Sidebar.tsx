@@ -56,7 +56,11 @@ const Sidebar: React.FC<SidebarProps> = ({
           </button>
         </div>
       ) : (
-        <div className="sidebar-button" onClick={() => onToggle('')}>
+        <div
+          className="sidebar-button"
+          onClick={() => onToggle('')}
+          role="button"
+        >
           <img src="assets/img/icon-chevron.svg" alt="Open" />
         </div>
       )}
@@ -87,16 +91,6 @@ const Sidebar: React.FC<SidebarProps> = ({
             <div dangerouslySetInnerHTML={{ __html: htmlDetailBouy }} />
           ) : noData ? (
             <div className="sidebar-message">
-              {/* Original message */}
-              {/* <p>
-                Hello! Explore buoy data by{' '}
-                <strong>
-                  tapping on a buoy{' '}
-                  <img src="assets/img/icon-pointer.png" alt="buoy" /> on the
-                  map
-                </strong>
-                .
-              </p> */}
               <p>
                 こんにちは! ブイにタップすることで、
                 <strong>
