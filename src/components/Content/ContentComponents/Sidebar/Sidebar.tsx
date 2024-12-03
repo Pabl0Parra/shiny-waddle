@@ -172,8 +172,6 @@ const Sidebar: React.FC<SidebarProps> = ({
               lastBuoyTimeStamp={lastBuoyTimeStamp}
               selectedNameBuoy={selectedNameBuoy}
               logoBuoy={logoBuoy}
-              lat_str={lat_str}
-              longi_str={longi_str}
             />
           </motion.div>
         )}

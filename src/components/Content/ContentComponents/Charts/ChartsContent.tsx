@@ -80,8 +80,6 @@ interface ChartsContentProps {
   lastBuoyTimeStamp: string;
   selectedNameBuoy: string;
   logoBuoy: { logopath: string; name_buoy: string }[];
-  lat_str: string;
-  longi_str: string;
 }
 
 const yaxisLabelFormatter = (val: number | undefined): string => {
