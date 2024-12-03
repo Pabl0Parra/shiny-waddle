@@ -33,12 +33,17 @@ Handlebars.registerHelper(
 Handlebars.registerHelper('getValueItem', function (item: Item, options: any) {
   const context = options.data.root;
   const measurementUnits = context.measurementUnits;
-  if (measurementUnits != 'IMP') {
-    if (item.value_sint != -9999) return item.value_sint.toString();
-    else return '-';
+
+  if (measurementUnits !== 'IMP') {
+    if (item.value_sint !== -9999) {
+      return item.value_sint.toString();
+    } else {
+      return '-';
+    }
+  } else if (item.value_simp !== -9999) {
+    return item.value_simp.toString();
   } else {
-    if (item.value_simp != -9999) return item.value_simp.toString();
-    else return '-';
+    return '-';
   }
 });
 
