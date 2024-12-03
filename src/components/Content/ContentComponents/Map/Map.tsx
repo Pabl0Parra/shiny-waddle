@@ -21,7 +21,7 @@ interface Buoy {
   website: string;
 }
 
-const Map: React.FC<MapProps> = ({ callBuoy, setBouysLoadMap }) => {
+const CustomMap: React.FC<MapProps> = ({ callBuoy, setBouysLoadMap }) => {
   const { apiUrl, website: configWebsite } = config; // Destructure website from config
 
   const { data, error, loading } = useFetchData(apiUrl);
@@ -202,4 +202,4 @@ const Map: React.FC<MapProps> = ({ callBuoy, setBouysLoadMap }) => {
   );
 };
 
-export default Map;
+export default CustomMap;

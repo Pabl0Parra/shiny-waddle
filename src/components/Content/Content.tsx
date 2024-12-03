@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Content.css';
-import Map from './ContentComponents/Map/Map';
+import CustomMap from './ContentComponents/Map/Map';
 import Sidebar from './ContentComponents/Sidebar/Sidebar';
 import SidebarGlobal from './ContentComponents/Sidebar/SidebarGlobal';
 import { useFetchDataDetail } from '../../hooks/useFetchDataDetail';
@@ -369,7 +369,7 @@ const Content: React.FC<ContentProps> = ({ measurementUnits }) => {
       {renderSidebar()} {/* Conditionally render Sidebar or SidebarGlobal */}
       <div className={`map  ${isActive ? 'map-close' : ''}`}>
         <APIProvider apiKey={apiKey}>
-          <Map callBuoy={callBuoy} setBouysLoadMap={setBouysLoadMap} />
+          <CustomMap callBuoy={callBuoy} setBouysLoadMap={setBouysLoadMap} />
         </APIProvider>
       </div>
     </div>
