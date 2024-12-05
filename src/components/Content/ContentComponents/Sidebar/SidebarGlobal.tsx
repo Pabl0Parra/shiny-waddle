@@ -55,9 +55,9 @@ const SideGlobalComponent: React.FC<SidebarProps> = ({
           </button>
         </div>
       ) : (
-        <div className="sidebar-button" onClick={() => onToggle('')}>
+        <button className="sidebar-button" onClick={() => onToggle('')}>
           <img src="assets/img/icon-chevron.svg" alt="Toggle Sidebar" />
-        </div>
+        </button>
       )}
 
       <div className="sidebar-content">
