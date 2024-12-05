@@ -54,13 +54,9 @@ const Sidebar: React.FC<SidebarProps> = ({
           </button>
         </div>
       ) : (
-        <div
-          className="sidebar-button"
-          onClick={() => onToggle('')}
-          role="button"
-        >
+        <button className="sidebar-button" onClick={() => onToggle('')}>
           <img src="assets/img/icon-chevron.svg" alt="Open" />
-        </div>
+        </button>
       )}
 
       <div className="sidebar-content">
