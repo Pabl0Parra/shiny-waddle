@@ -845,7 +845,7 @@ const ChartsContent: React.FC<ChartsContentProps> = ({
                 'span, div, p, h1, h2, h3, h4, h5, h6',
               );
               dateElements.forEach((dateElem) => {
-                const originalText = dateElem.textContent || '';
+                const originalText = dateElem.textContent ?? '';
                 const reformattedText = originalText;
                 dateElem.textContent = reformattedText;
               });
