@@ -86,10 +86,10 @@ const Sidebar: React.FC<SidebarProps> = ({
           ) : noData ? (
             <div className="sidebar-message">
               <p>
-                こんにちは! ブイにタップすることで、
+                こんにちは! ブイにタップすることで、{' '}
                 <strong>
                   ブイ <img src="assets/img/icon-pointer.png" alt="buoy" />
-                </strong>
+                </strong>{' '}
                 データを探索することができます。
               </p>
               <img
