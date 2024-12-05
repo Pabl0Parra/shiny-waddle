@@ -87,11 +87,10 @@ const SideGlobalComponent: React.FC<SidebarProps> = ({
           ) : noData ? (
             <div className="sidebar-message">
               <p>
-                Hello! By tapping on a buoy, you can explore
+                Hello! By tapping on a buoy, you can explore{' '}
                 <strong>
-                  {' '}
                   buoy <img src="assets/img/icon-pointer.png" alt="buoy" />
-                </strong>
+                </strong>{' '}
                 data.
               </p>
               <img

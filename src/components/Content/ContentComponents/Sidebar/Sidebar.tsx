@@ -113,7 +113,6 @@ const Sidebar: React.FC<SidebarProps> = ({
                 <span className="skeleton-item">25/04/1987 ~ 03:00 AM</span>
               </div>
               <div className="list">
-                {/* Repeat list items as needed */}
                 <div className="list-item">
                   <div className="list-item-icon skeleton-item">
                     <img
