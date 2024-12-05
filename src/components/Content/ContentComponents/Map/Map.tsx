@@ -30,6 +30,10 @@ const CustomMap: React.FC<MapProps> = ({ callBuoy, setBouysLoadMap }) => {
   const MAX_ZOOM_LEVEL: number = 6;
   const [zoomMap, setZoomMap] = useState<number>(2);
   const [autoZoomMap, setAutoZoomMap] = useState<boolean>(false);
+  const [mapCenter, setMapCenter] = useState<google.maps.LatLngLiteral>({
+    lat: 0,
+    lng: 0,
+  });
 
   // Determine the target website based on config.website
   const targetWebsite = useMemo(() => {
@@ -137,6 +141,12 @@ const CustomMap: React.FC<MapProps> = ({ callBuoy, setBouysLoadMap }) => {
     }
   }, [zoomMap, autoZoomMap, filteredBuoys.length, targetWebsite, mapRef]);
 
+  useEffect(() => {
+    if (filteredBuoys.length > 0) {
+      setMapCenter({ lat: filteredBuoys[0].lat, lng: filteredBuoys[0].longi });
+    }
+  }, [filteredBuoys]);
+
   if (loading) {
     console.log('MAP: LOADING...');
     return <div className="loader"></div>;
@@ -155,11 +165,7 @@ const CustomMap: React.FC<MapProps> = ({ callBuoy, setBouysLoadMap }) => {
   return (
     <MapGoogle
       defaultZoom={8}
-      // defaultCenter={
-      //   filteredBuoys.length
-      //     ? { lat: filteredBuoys[0].lat, lng: filteredBuoys[0].longi }
-      //     : { lat: 0, lng: 0 }
-      // }
+      center={mapCenter}
       mapId="eolos_map_id"
       mapTypeId="satellite"
       streetViewControl={false}
