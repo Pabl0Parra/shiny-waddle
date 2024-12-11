@@ -62,8 +62,12 @@ const Header: React.FC<HeaderProps> = ({
               </select>
             ) : (
               <>
-                <label>Units:</label>
-                <select value={measurementUnits} onChange={handleChange}>
+                <label htmlFor="measurementUnitsSelect">Units:</label>
+                <select
+                  id="measurementUnitsSelect"
+                  value={measurementUnits}
+                  onChange={handleChange}
+                >
                   <option value="INT">International</option>
                   <option value="IMP">Imperial</option>
                 </select>
